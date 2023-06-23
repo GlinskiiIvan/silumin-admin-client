@@ -1,0 +1,13 @@
+.container {  
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: row;
+    height: 100vh;
+}
+
+.outlet {
+    height: 100vh;
+    overflow: auto;
+    padding: 20px;
+}

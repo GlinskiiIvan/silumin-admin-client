@@ -1,0 +1,13 @@
+@import '../../styles//vars';
+
+.textarea {
+    outline: none;
+    padding: 10px 45px 10px 15px;
+    border: 2px solid $primary;
+    border-radius: 7px;
+    transition: all .3s ease;
+    &:focus {
+        border-radius: 10px;
+        border: 2px solid $success;
+    }    
+}

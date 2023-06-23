@@ -1,0 +1,8 @@
+@import '../../styles/vars';
+.option {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }   
+}

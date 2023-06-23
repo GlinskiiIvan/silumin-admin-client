@@ -1,0 +1,30 @@
+@import '../../styles/vars';
+.wrapper {
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+        // gap: 28px;
+        width: 100%;
+        a {
+            width: 100%;
+            text-align: center;
+            font-size: 28px;
+            // color: rgb(211, 211, 211);
+            color: $text_light;
+            transition: all .2s ease;
+            padding: 14px 0;
+            &.active {
+                background-color: $primary_dark;
+            }
+            &:hover {
+                background-color: $primary_dark;
+            }
+        }
+    }
+}

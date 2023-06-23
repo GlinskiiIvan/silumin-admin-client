@@ -1,0 +1,38 @@
+@import '../../styles/vars';
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid $primary_dark;
+    padding: 10px 20px;
+    p {
+        font-size: 18px;
+        cursor: default;
+    }
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 15px;
+        border-left: 2px solid $primary;
+        padding-left: 20px;
+        svg {
+            width: 25px;
+            height: 25px;
+            transition: all 0.2s ease;
+            cursor: pointer;            
+        }
+        .edit {
+            &:hover {
+                fill: $primary
+            }
+        }
+        .remove {
+            &:hover {
+                fill: $danger
+            }
+        }
+    }
+}
