@@ -3,10 +3,10 @@ import { Button } from 'react-bootstrap';
 
 import styles from './JobOpeningsActions.module.scss';
 
-import Input from '../../UI/Input/Input';
+import Input from '../../../UI/Input/Input';
 import { useParams } from 'react-router-dom';
-import LayoutActionRecord from '../../Layouts/LayoutActionRecord/LayoutActionRecord';
-import Textarea from '../../UI/Textarea/Textarea';
+import LayoutActionRecord from '../../../Layouts/LayoutActionRecord/LayoutActionRecord';
+import Textarea from '../../../UI/Textarea/Textarea';
 
 interface ICondition {
     id: number;

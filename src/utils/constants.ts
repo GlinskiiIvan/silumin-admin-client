@@ -1,13 +1,16 @@
 const LOGIN_ROUTE = '/login';
+
 const USERS_ROUTE = '/users';
+const USERS_CREATE_ROUTE = USERS_ROUTE + '/create';
+const USERS_EDIT_ROUTE = USERS_ROUTE + '/edit';
 
 const LICENSES_ROUTE = '/licenses';
-const LICENSES_CREATE_ROUTE = LICENSES_ROUTE + '/actions';
-const LICENSES_EDIT_ROUTE = LICENSES_CREATE_ROUTE;
+const LICENSES_CREATE_ROUTE = LICENSES_ROUTE + '/create';
+const LICENSES_EDIT_ROUTE = LICENSES_ROUTE + '/edit';
 
 const JOB_OPENINGS_ROUTE = '/job-openings';
-const JOB_OPENINGS_CREATE_ROUTE = JOB_OPENINGS_ROUTE + '/actions';
-const JOB_OPENINGS_EDIT_ROUTE = JOB_OPENINGS_CREATE_ROUTE;
+const JOB_OPENINGS_CREATE_ROUTE = JOB_OPENINGS_ROUTE + '/create';
+const JOB_OPENINGS_EDIT_ROUTE = JOB_OPENINGS_ROUTE + '/edit';
 
 const NEWS_ROUTE = '/news';
 const PROJECTS_ROUTE = '/projects';
@@ -28,6 +31,8 @@ export const ROUTES = {
     JOB_OPENINGS_EDIT_ROUTE,
     LICENSES_CREATE_ROUTE,
     LICENSES_EDIT_ROUTE,
+    USERS_CREATE_ROUTE,
+    USERS_EDIT_ROUTE,
 };
 
 export const REACT_APP_API_URL= 'http://localhost:5000/';

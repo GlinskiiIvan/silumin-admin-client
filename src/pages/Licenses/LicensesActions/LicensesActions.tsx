@@ -2,10 +2,10 @@ import React from "react";
 import { Button } from "react-bootstrap";
 
 import styles from './LicensesActions.module.scss';
-import Input from "../../UI/Input/Input";
-import {ReactComponent  as ClearIcon} from '../../assets/icons/clear.svg';
+import Input from "../../../UI/Input/Input";
+import {ReactComponent  as ClearIcon} from '../../../assets/icons/clear.svg';
 import { useParams } from "react-router-dom";
-import LayoutActionRecord from "../../Layouts/LayoutActionRecord/LayoutActionRecord";
+import LayoutActionRecord from "../../../Layouts/LayoutActionRecord/LayoutActionRecord";
 
 interface ILicense {id: number; image: string};
 interface INewLicenses {id: number; file: File};
