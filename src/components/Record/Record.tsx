@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 
 interface IProps extends InputHTMLAttributes<HTMLDivElement> {
     readonly title: string;
-    readonly editTo: string;
+    readonly editTo?: string;
     readonly onDelete: any;
 }
 
@@ -17,9 +17,11 @@ const Record: React.FC<IProps> = ({title, editTo, onDelete, ...otherProps}) => {
         <div className={styles.container} {...otherProps}>
             <p>{title}</p>
             <div className={styles.actions}>
-                <NavLink to={editTo}>
-                    <EditIcon  className={styles.edit} />
-                </NavLink>
+                {editTo && (
+                    <NavLink to={editTo}>
+                        <EditIcon  className={styles.edit} />
+                    </NavLink>
+                )}
                 <DeleteIcon className={styles.remove}  onClick={onDelete} />
             </div>
         </div>
