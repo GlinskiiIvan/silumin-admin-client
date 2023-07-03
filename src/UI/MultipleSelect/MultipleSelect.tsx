@@ -17,7 +17,7 @@ const MultipleSelect: React.FC<IProps> = ({items, selectedItems, setSelectedItem
     const [searchQuery, setSearchQuery] = React.useState('');
 
     const onSelectHandle = (item: string) => {
-        setSelectedItems([item, ...selectedItems])
+        setSelectedItems([...selectedItems, item])
         setSearchQuery('');
         setIsVisible(false);
     }

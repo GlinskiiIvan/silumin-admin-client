@@ -4,6 +4,10 @@ const USERS_ROUTE = '/users';
 const USERS_CREATE_ROUTE = USERS_ROUTE + '/create';
 const USERS_EDIT_ROUTE = USERS_ROUTE + '/edit';
 
+const ROLES_ROUTE = '/roles';
+const ROLES_CREATE_ROUTE = ROLES_ROUTE + '/create';
+const ROLES_EDIT_ROUTE = ROLES_ROUTE + '/edit';
+
 const LICENSES_ROUTE = '/licenses';
 const LICENSES_CREATE_ROUTE = LICENSES_ROUTE + '/create';
 const LICENSES_EDIT_ROUTE = LICENSES_ROUTE + '/edit';
@@ -33,7 +37,10 @@ export const ROUTES = {
     LICENSES_EDIT_ROUTE,
     USERS_CREATE_ROUTE,
     USERS_EDIT_ROUTE,
+    ROLES_ROUTE,
+    ROLES_CREATE_ROUTE,
+    ROLES_EDIT_ROUTE
 };
 
-export const REACT_APP_API_URL= 'http://localhost:5000/';
+export const REACT_APP_API_URL= 'http://localhost:5001/';
 export const REACT_APP_CLIENT_URL= 'http://localhost:3000/';

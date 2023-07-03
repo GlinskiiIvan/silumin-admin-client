@@ -8,6 +8,7 @@ const Sidebar: React.FC = () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.container}>
+                    <NavLink className={({ isActive }) => (isActive ? styles.active : '')} to={ROUTES.ROLES_ROUTE}>Роли</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? styles.active : '')} to={ROUTES.USERS_ROUTE}>Пользователи</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? styles.active : '')} to={ROUTES.LICENSES_ROUTE}>Лицензии</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? styles.active : '')} to={ROUTES.JOB_OPENINGS_ROUTE}>Вакансии</NavLink>
