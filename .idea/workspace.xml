@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6206b15-756d-497e-8e83-2dd03a98c787" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Textarea/Textarea.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Textarea/Textarea.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modals/ResponseResultModal/ResponseResultModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modals/ResponseResultModal/ResponseResultModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Licenses/LicensesActions/LicensesActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Licenses/LicensesActions/LicensesActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/News/NewsActions/NewsActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/News/NewsActions/NewsActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Requirements/RequirementsActions/RequirementsActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Requirements/RequirementsActions/RequirementsActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/services/contactsBranches.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/services/contactsBranches.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/services/employees.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/services/employees.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/services/job-openings.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/services/job-openings.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/services/licenses.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/services/licenses.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/services/news.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/services/news.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/services/requirements.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/services/requirements.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/services/roles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/services/roles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/services/users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/services/users.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/slices/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/slices/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +69,8 @@
       <workItem from="1688969078391" duration="8959000" />
       <workItem from="1689060352964" duration="1338000" />
       <workItem from="1689146665587" duration="2834000" />
-      <workItem from="1689166469487" duration="1564000" />
+      <workItem from="1689166469487" duration="1968000" />
+      <workItem from="1689172061209" duration="117000" />
     </task>
     <servers />
   </component>
