@@ -7,11 +7,11 @@ import {ReactComponent  as SearchIcon} from '../../assets/icons/search.svg';
 interface IProps {
     items: string[],
     selectedItems: string[],
-    setSelectedItems: Function
+    setSelectedItems: Function,
+    textBtn: string,
 }
 
-
-const MultipleSelect: React.FC<IProps> = ({items, selectedItems, setSelectedItems}) => {
+const MultipleSelect: React.FC<IProps> = ({items, selectedItems, setSelectedItems, textBtn}) => {
     const [isVisible, setIsVisible] = React.useState(false);
 
     const [searchQuery, setSearchQuery] = React.useState('');
@@ -47,13 +47,13 @@ const MultipleSelect: React.FC<IProps> = ({items, selectedItems, setSelectedItem
                     ? selectedItems?.map((item) => (
                         <Record key={item} title={item} onDelete={() => onRemoveSelectedItem(item)} />
                     ))
-                    : 'Элементы не выбраны. Для того что бы выбрать нажмите кнопку "Добавить роль"'
+                    : `Элементы не выбраны. Для того что бы выбрать нажмите кнопку "${textBtn}"`
                 }
             </ul>
         </div>
 
         <div className={styles.wrapper}>
-            <div className={styles.title} onClick={() => toggleVisible()}>Добавить роль</div>
+            <div className={styles.title} onClick={() => toggleVisible()}>{textBtn}</div>
             {isVisible &&
                 <div className={styles.outside} onClick={() => setIsVisible(false)}></div>
             }

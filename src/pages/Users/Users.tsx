@@ -4,35 +4,30 @@ import styles from './Users.module.scss';
 import {ROUTES} from "../../utils/constants";
 import Record from "../../components/Record/Record";
 import LayoutListRecords from "../../Layouts/LayoutListRecords/LayoutListRecords";
+import {usersAPI} from "../../store/services/users";
+import ResponseResultModal from "../../components/Modals/ResponseResultModal/ResponseResultModal";
 
 const Users: React.FC = () => {
-    const records = [
-        {
-            id: 1,
-            name: 'User 1'
-        },
-        {
-            id: 2,
-            name: 'User admin'
-        },
-        {
-            id: 3,
-            name: 'USer super admin'
-        },
-    ]
 
-    const onDeleteHandler = (id: number) => {
-        console.log(`delete record ${id}!`);
+    const {data = [], error, isLoading} = usersAPI.useGetAllUsersQuery();
+    const [removeUser, {isSuccess: removeIsSuccess, isError: removeIsError, error: removeError}] = usersAPI.useRemoveUserMutation();
+
+    const onDeleteHandler = async (id: number) => {
+        await removeUser({id});
     }
 
     return (
-        <LayoutListRecords title='Пользователи' buttonLink={ROUTES.USERS_CREATE_ROUTE} buttonText='Добавить пользователя'>
-            <>
-                {records.map((item) => (
-                    <Record key={item.id} title={item.name} editTo={ROUTES.USERS_EDIT_ROUTE + '/' + item.id} onDelete={() => onDeleteHandler(item.id)} />
-                ))}
-            </>
-        </LayoutListRecords>
+        <>
+            <ResponseResultModal isSuccess={removeIsSuccess} isError={removeIsError} error={removeError} successMessage='Пользователь успешно удален!' />
+
+            <LayoutListRecords title='Пользователи' buttonLink={ROUTES.USERS_CREATE_ROUTE} buttonText='Добавить пользователя'>
+                <>
+                    {data.map((item) => (
+                        <Record key={item.id} title={item.name} editTo={ROUTES.USERS_EDIT_ROUTE + '/' + item.id} onDelete={() => onDeleteHandler(item.id)} />
+                    ))}
+                </>
+            </LayoutListRecords>
+        </>
     );
 };
 

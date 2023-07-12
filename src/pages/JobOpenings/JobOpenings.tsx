@@ -3,35 +3,35 @@ import React from 'react';
 import LayoutListRecords from '../../Layouts/LayoutListRecords/LayoutListRecords';
 import Record from '../../components/Record/Record';
 import { ROUTES } from '../../utils/constants';
+import {jobOpeningsAPI} from "../../store/services/job-openings";
+import ResponseResultModal from "../../components/Modals/ResponseResultModal/ResponseResultModal";
 
 const JobOpenings: React.FC = () => {
-    const records = [
-        {
-            id: 1,
-            title: 'Frontend dev'
-        },
-        {
-            id: 2,
-            title: 'Backend dev'
-        },
-        {
-            id: 3,
-            title: 'Full stack dev'
-        },
-    ]
+    const {data = [], error, isLoading} = jobOpeningsAPI.useGetAllJobOpeningsQuery();
+    const [removeJobOpening, {isSuccess: removeIsSuccess, isError: removeIsError, error: removeError}] = jobOpeningsAPI.useRemoveJobOpeningMutation();
 
-    const onDeleteHandler = (id: number) => {
-        console.log(`delete record ${id}!`);
+    const onDeleteHandler = async (id: number) => {
+        await removeJobOpening({id});
     }
 
     return (
-        <LayoutListRecords title='Вакансии' buttonLink={ROUTES.JOB_OPENINGS_CREATE_ROUTE} buttonText='Добавить вакансию'>
-            <>
-                {records.map((item) => (
-                    <Record key={item.id} title={item.title} editTo={ROUTES.JOB_OPENINGS_EDIT_ROUTE + '/' + item.id} onDelete={() => onDeleteHandler(item.id)} />
-                ))}
-            </>
-        </LayoutListRecords>
+        <>
+            <ResponseResultModal isSuccess={removeIsSuccess} isError={removeIsError} error={removeError} successMessage='Вакансия успешно удалена!' />
+
+            <LayoutListRecords title='Вакансии' buttonLink={ROUTES.JOB_OPENINGS_CREATE_ROUTE} buttonText='Добавить вакансию'>
+                <>
+                    {
+                        isLoading
+                        ? <h3>Получение вакансий...</h3>
+                        : data.length > 0
+                        ? data.map((item) => (
+                                <Record key={item.id} title={item.name} editTo={ROUTES.JOB_OPENINGS_EDIT_ROUTE + '/' + item.id} onDelete={() => onDeleteHandler(item.id)} />
+                            ))
+                        : <h3>Вакансии не найдены...</h3>
+                    }
+                </>
+            </LayoutListRecords>
+        </>
     );
 };
 

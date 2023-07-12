@@ -1,0 +1,64 @@
+@import "../../styles/vars";
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: $primary;
+  height: $header_height;
+  .menu_btn {
+    position: relative;
+    cursor: pointer;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    span,&:before,&:after {
+      display: block;
+      width: 30px;
+      height: 3px;
+      background: #fff;
+      transition: all .3s ease-in-out;
+      opacity: 1;
+    }
+    &:before,&:after {
+      content: '';
+      position: absolute;
+    }
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: 0;
+    }
+    &.active {
+      span {
+        opacity: 0;
+        display: none;
+      }
+      &:before,&:after {
+      }
+      &:before {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+      }
+      &:after {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+      }
+    }
+  }
+  .user {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    color: $text_light;
+    font-size: 28px;
+  }
+}

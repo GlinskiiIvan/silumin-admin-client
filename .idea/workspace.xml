@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c6206b15-756d-497e-8e83-2dd03a98c787" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/UI/InputDate/InputDate.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/InputDate/InputDate.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/Select/Select.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/Select/Select.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/InputErrorMessage/InputErrorMessage.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/InputErrorMessage/InputErrorMessage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Modals/ResponseResultModal/ResponseResultModal.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Modals/ResponseResultModal/ResponseResultModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MultipleInput/MultipleInput.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MultipleInput/MultipleInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MultipleInputSelect/MultipleInputSelect.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MultipleInputSelect/MultipleInputSelect.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/QueryModal/QueryModal.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/QueryModal/QueryModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useInput.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useQueryError.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useQuerySuccess.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useValidation.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/userAPI.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/ContactsBranches/ContactsBranchesActions/ContactsBranchesActions.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/ContactsBranches/ContactsBranchesActions/ContactsBranchesActions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Employees/EmployeesActions/EmployeesActions.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Employees/EmployeesActions/EmployeesActions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/Main.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/Main.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/News/NewsActions/NewsActions.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/News/NewsActions/NewsActions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Requirements/Requirements.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Requirements/Requirements.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Requirements/RequirementsActions/RequirementsActions.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Requirements/RequirementsActions/RequirementsActions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/services/contactsBranches.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/services/employees.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/services/job-openings.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/services/licenses.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/services/news.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/services/pokemon.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/services/requirements.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/services/roles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/services/users.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/slices/user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layouts/Layout/Layout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layouts/Layout/Layout.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layouts/Layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layouts/Layout/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layouts/LayoutActionRecord/LayoutActionRecord.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layouts/LayoutActionRecord/LayoutActionRecord.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Input/Input.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Input/Input.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/MultipleSelect/MultipleSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MultipleSelect/MultipleSelect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Textarea/Textarea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Textarea/Textarea.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppRouter/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppRouter/AppRouter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ContactsBranches/ContactsBranches.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ContactsBranches/ContactsBranches.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Employees/Employees.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Employees/Employees.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/JobOpenings/JobOpenings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/JobOpenings/JobOpenings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/JobOpenings/JobOpeningsActions/JobOpeningsActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/JobOpenings/JobOpeningsActions/JobOpeningsActions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Licenses/Licenses.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Licenses/Licenses.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Licenses/LicensesActions/LicensesActions.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Licenses/LicensesActions/LicensesActions.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Licenses/LicensesActions/LicensesActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Licenses/LicensesActions/LicensesActions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/News/News.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/News/News.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Roles/Roles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Roles/Roles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Roles/RolesActions/RolesActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Roles/RolesActions/RolesActions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Users/UsersActions/UsersActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Users/UsersActions/UsersActions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_vars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2S3wrqhXYqfEhvqRtfWKfvTCcje" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "F:/React/silumin/client",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "preferences.general",
+    "ts.external.directory.path": "F:\\React\\silumin\\client\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\React\silumin\client\src\components\Modals" />
+      <recent name="F:\React\silumin\client\src\store" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c6206b15-756d-497e-8e83-2dd03a98c787" name="Changes" comment="" />
+      <created>1688388773950</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688388773950</updated>
+      <workItem from="1688388775149" duration="38000" />
+      <workItem from="1688388887537" duration="7508000" />
+      <workItem from="1688404524657" duration="3285000" />
+      <workItem from="1688454126927" duration="1515000" />
+      <workItem from="1688464551439" duration="5094000" />
+      <workItem from="1688490595095" duration="30000" />
+      <workItem from="1688497637019" duration="21000" />
+      <workItem from="1688499474847" duration="1807000" />
+      <workItem from="1688534322572" duration="23217000" />
+      <workItem from="1688624706484" duration="22742000" />
+      <workItem from="1688666664228" duration="6990000" />
+      <workItem from="1688676963452" duration="4234000" />
+      <workItem from="1688711360107" duration="20424000" />
+      <workItem from="1688798738964" duration="26928000" />
+      <workItem from="1688844169142" duration="2023000" />
+      <workItem from="1688882253282" duration="23183000" />
+      <workItem from="1688929252893" duration="13000" />
+      <workItem from="1688969078391" duration="8959000" />
+      <workItem from="1689060352964" duration="1338000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

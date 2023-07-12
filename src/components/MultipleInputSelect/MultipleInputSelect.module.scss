@@ -1,0 +1,29 @@
+@import "../../styles/vars";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .actions {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 2fr 0.2fr 0.2fr;
+    gap: 20px;
+    .remove {
+      border: 2px solid $danger;
+      border-radius: 5px;
+      padding: 5px;
+      width: 40px;
+      height: 40px;
+    }
+    svg {
+      transition: all .3s ease;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      &:hover {
+        fill: $danger;
+      }
+    }
+  }
+}

@@ -8,9 +8,10 @@ interface IProps {
     actionText: string;
     action: any;
     children: React.ReactElement | null;
+    isValid: boolean;
 }
 
-const LayoutActionRecord: React.FC<IProps> = ({title, actionText, action, children}) => {
+const LayoutActionRecord: React.FC<IProps> = ({title, actionText, action, children, isValid}) => {
 
     return (
         <div className={styles.wrapper}>
@@ -18,7 +19,7 @@ const LayoutActionRecord: React.FC<IProps> = ({title, actionText, action, childr
             <div className={styles.container}>
                 {children}
             </div>
-            <Button variant='success' onClick={action}>{actionText}</Button>
+            <Button disabled={isValid} variant='success' onClick={action}>{actionText}</Button>
         </div>
     )
 }

@@ -1,9 +1,17 @@
 import React from 'react';
 import AppRouter from '../AppRouter/AppRouter';
-import {redirect} from "react-router-dom";
-import {ROUTES} from "../../utils/constants";
+import {useDispatch} from "react-redux";
+import {AppDispatch} from "../../store/store";
+import {checkThunk} from "../../store/slices/user";
 
 function App() {
+
+  const dispatch = useDispatch<AppDispatch>();
+
+  React.useEffect(() => {
+    dispatch(checkThunk({}));
+  }, []);
+
   return (
     <AppRouter />
   );

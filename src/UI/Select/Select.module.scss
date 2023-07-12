@@ -1,0 +1,111 @@
+@import '../../styles/vars';
+.wrapper {
+  font-size: 18px;
+  position: relative;
+}
+
+.title,
+.list {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.title {
+  position: relative;
+  //padding: 5px 15px;
+  z-index: 1;
+  border-radius: 5px;
+  background-color: $primary;
+  padding: 0.375rem 0.75rem;
+  color: #fff;
+  transition: all .3s ease;
+  &:hover {
+    background-color: $primary_dark;
+  }
+}
+
+.list {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  display: none;
+  color: #fff;
+
+  &__item {
+    padding: 5px 15px;
+    transition: background-color 0.3s ease;
+    background-color: $primary;
+
+    &:hover {
+      background-color: $primary_dark;
+    }
+    &.selected {
+      background-color: $primary_dark;
+      cursor: default;
+    }
+  }
+}
+
+.list.visible {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  animation: fade-in 0.3s ease;
+}
+
+.outside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+//variants
+.dark {
+  background-color: $primary;
+
+  &:hover {
+    background-color: $primary_dark;
+  }
+  &.selected {
+    background-color: $primary_dark;
+    cursor: default;
+  }
+}
+.light {
+
+  &:hover {
+
+  }
+  &.selected {
+
+  }
+}
+.dark-outline {
+
+  &:hover {
+
+  }
+  &.selected {
+
+  }
+}
+.light-outline {
+
+  &:hover {
+
+  }
+  &.selected {
+
+  }
+}

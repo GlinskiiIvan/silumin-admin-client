@@ -1,36 +1,32 @@
 import React from 'react';
 
-import styles from './Licenses.module.scss';
-import { Button } from 'react-bootstrap';
 import { ROUTES } from '../../utils/constants';
 import Record from '../../components/Record/Record';
-import { NavLink } from 'react-router-dom';
 import LayoutListRecords from '../../Layouts/LayoutListRecords/LayoutListRecords';
+import {usersAPI} from "../../store/services/users";
+import {licenseAPI} from "../../store/services/licenses";
+import ResponseResultModal from "../../components/Modals/ResponseResultModal/ResponseResultModal";
 
 const Licenses: React.FC = () => {
-    const records = [
-        {
-            id: 1,
-            title: 'Лицензии'
-        },
-        {
-            id: 2,
-            title: 'Сертификаты'
-        }
-    ]
+    const {data = [], error, isLoading} = licenseAPI.useGetAllLicensesQuery();
+    const [removeLicense, {isSuccess: removeIsSuccess, isError: removeIsError, error: removeError}] = licenseAPI.useRemoveLicenseMutation();
 
-    const onDeleteHandler = (id: number) => {
-        console.log(`delete record ${id}!`);
+    const onDeleteHandler = async (id: number) => {
+        await removeLicense({id});
     }
 
     return (
-        <LayoutListRecords title='Лицензии и сертификаты' buttonLink={ROUTES.LICENSES_CREATE_ROUTE} buttonText='Добавить категорию лицензии'>
-            <>
-                {records.map((item) => (
-                    <Record key={item.id} title={item.title} editTo={ROUTES.LICENSES_EDIT_ROUTE + '/' + item.id} onDelete={() => onDeleteHandler(item.id)} />
-                ))}
-            </>
-        </LayoutListRecords>
+        <>
+            <ResponseResultModal isSuccess={removeIsSuccess} isError={removeIsError} error={removeError} successMessage='Категория лицензий успешно удалена!' />
+
+            <LayoutListRecords title='Лицензии и сертификаты' buttonLink={ROUTES.LICENSES_CREATE_ROUTE} buttonText='Добавить категорию лицензий'>
+                <>
+                    {data.map((item) => (
+                        <Record key={item.id} title={item.name} editTo={ROUTES.LICENSES_EDIT_ROUTE + '/' + item.id} onDelete={() => onDeleteHandler(item.id)} />
+                    ))}
+                </>
+            </LayoutListRecords>
+        </>
     );
 };
 

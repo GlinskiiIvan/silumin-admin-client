@@ -1,0 +1,11 @@
+@import "../../styles/vars";
+
+.success {
+  background-color: $success;
+  color: #fff;
+}
+
+.error {
+  background-color: $danger;
+  color: #fff;
+}
