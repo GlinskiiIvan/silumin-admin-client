@@ -66,6 +66,3 @@ export const ROUTES = {
     CONTACTS_BRANCHES_EDIT_ROUTE,
     PROJECTS_ROUTE,
 };
-
-export const REACT_APP_API_URL= 'http://localhost:5001/';
-export const REACT_APP_CLIENT_URL= 'http://localhost:3000/';

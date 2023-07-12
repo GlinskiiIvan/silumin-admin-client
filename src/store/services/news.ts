@@ -1,5 +1,4 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import {REACT_APP_API_URL} from "../../utils/constants";
 
 interface INewses {
     id: number;
@@ -21,7 +20,7 @@ interface INews {
 export const newsAPI = createApi({
     reducerPath: 'newsAPI',
     baseQuery: fetchBaseQuery({
-        baseUrl: REACT_APP_API_URL,
+        baseUrl: process.env.REACT_APP_API_URI,
         prepareHeaders: (headers ) => {
             const token = localStorage.getItem('token');
             if (token) {

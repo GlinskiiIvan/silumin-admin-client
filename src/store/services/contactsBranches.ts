@@ -1,5 +1,4 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import {REACT_APP_API_URL} from "../../utils/constants";
 
 interface IContactsBranches {
     id: number;
@@ -36,7 +35,7 @@ const URL = 'contacts-branches';
 export const contactsBranchesAPI = createApi({
     reducerPath: 'contactsBranchesAPI',
     baseQuery: fetchBaseQuery({
-        baseUrl: REACT_APP_API_URL,
+        baseUrl: process.env.REACT_APP_API_URI,
         prepareHeaders: (headers ) => {
             const token = localStorage.getItem('token');
             if (token) {

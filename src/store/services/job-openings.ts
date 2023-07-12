@@ -1,5 +1,4 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import {REACT_APP_API_URL} from "../../utils/constants";
 
 interface IJobOpening {
     id: number;
@@ -30,7 +29,7 @@ interface IJobOpeningUpdateBody {
 export const jobOpeningsAPI = createApi({
     reducerPath: 'jobOpeningsAPI',
     baseQuery: fetchBaseQuery({
-        baseUrl: REACT_APP_API_URL,
+        baseUrl: process.env.REACT_APP_API_URI,
         prepareHeaders: (headers ) => {
             const token = localStorage.getItem('token');
             if (token) {

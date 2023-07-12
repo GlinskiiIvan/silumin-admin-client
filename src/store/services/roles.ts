@@ -1,7 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import {REACT_APP_API_URL} from "../../utils/constants";
 import {IUsers} from "./users";
-import {RootState} from "../store";
 
 export interface IRoles {
     id: number,
@@ -32,7 +30,7 @@ interface IUpdateRoleBody {
 export const rolesAPI = createApi({
     reducerPath: 'rolesAPI',
     baseQuery: fetchBaseQuery({
-        baseUrl: REACT_APP_API_URL,
+        baseUrl: process.env.REACT_APP_API_URI,
         prepareHeaders: (headers ) => {
             const token = localStorage.getItem('token');
             if (token) {

@@ -1,14 +1,13 @@
 import axios, {AxiosRequestConfig, InternalAxiosRequestConfig} from "axios";
-import {REACT_APP_API_URL} from "../utils/constants";
 
 const $host = axios.create({
-    baseURL: REACT_APP_API_URL,
     // withCredentials: true
+    baseURL: process.env.REACT_APP_API_URI
 });
 
 const $authHost = axios.create({
-    baseURL: REACT_APP_API_URL,
     // withCredentials: true
+    baseURL: process.env.REACT_APP_API_URI
 });
 
 const authInterceptor = (config: InternalAxiosRequestConfig) => {
@@ -16,6 +15,7 @@ const authInterceptor = (config: InternalAxiosRequestConfig) => {
         throw new Error(`Expected 'config' and 'config.headers' not to be undefined`);
     }
     config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`;
+    console.log(`Bearer ${localStorage.getItem('token')}`)
     return config
 };
 

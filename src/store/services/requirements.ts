@@ -1,5 +1,4 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import {REACT_APP_API_URL} from "../../utils/constants";
 
 interface IRequirement {
     id: number;
@@ -18,7 +17,7 @@ interface IRequirementUpdateBody {
 export const requirementsAPI = createApi({
     reducerPath: 'requirementsAPI',
     baseQuery: fetchBaseQuery({
-        baseUrl: REACT_APP_API_URL,
+        baseUrl: process.env.REACT_APP_API_URI,
         prepareHeaders: (headers ) => {
             const token = localStorage.getItem('token');
             if (token) {

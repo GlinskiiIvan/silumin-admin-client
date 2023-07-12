@@ -5,11 +5,6 @@ import {requirementsAPI} from "../../../store/services/requirements";
 import ResponseResultModal from "../../../components/Modals/ResponseResultModal/ResponseResultModal";
 import LayoutActionRecord from "../../../Layouts/LayoutActionRecord/LayoutActionRecord";
 import Input from "../../../UI/Input/Input";
-import Textarea from "../../../UI/Textarea/Textarea";
-import MDEditor from "@uiw/react-md-editor";
-import InputDate from "../../../UI/InputDate/InputDate";
-import {REACT_APP_API_URL} from "../../../utils/constants";
-import {Button} from "react-bootstrap";
 
 const RequirementsActions: React.FC = () => {
     const {id} = useParams();

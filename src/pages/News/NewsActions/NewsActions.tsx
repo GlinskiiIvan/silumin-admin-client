@@ -6,10 +6,7 @@ import ResponseResultModal from "../../../components/Modals/ResponseResultModal/
 import LayoutActionRecord from "../../../Layouts/LayoutActionRecord/LayoutActionRecord";
 import Input from "../../../UI/Input/Input";
 
-import styles from "./NewsActions.module.scss";
-
-import {REACT_APP_API_URL} from "../../../utils/constants";
-import {Button, Form} from "react-bootstrap";
+import {Button} from "react-bootstrap";
 import Textarea from "../../../UI/Textarea/Textarea";
 import InputDate from "../../../UI/InputDate/InputDate";
 import MDEditor from '@uiw/react-md-editor';
@@ -23,15 +20,12 @@ const NewsActions: React.FC = () => {
     
     const title = useInput('', {isEmpty: true});
     const sub_title = useInput('', {isEmpty: true});
-    // const content = useInput('', {isEmpty: true});
+
     const [content, setContent] = React.useState('');
     const [date, setDate] = React.useState('');
     const [image, setImage] = React.useState('');
     const [newImage, setNewImage] = React.useState<File | null>(null);
 
-    const dateRef = React.useRef<HTMLInputElement>(null)
-
-    // const isValid = id ? !title.isValid || !sub_title.isValid || !content.isValid || !(!(!image && newImage) || !(image && !newImage)) : !title.isValid || !sub_title.isValid || !content.isValid || !date || !newImage
     const isValid = id ? !title.isValid || !sub_title.isValid || !content || !(!(!image && newImage) || !(image && !newImage)) : !title.isValid || !sub_title.isValid || !content || !date || !newImage
 
     React.useEffect(() => {
@@ -128,7 +122,7 @@ const NewsActions: React.FC = () => {
                     <div>
                         <h3>Обложка</h3>
                         {
-                            image && (<img src={REACT_APP_API_URL + image} alt="" /> )
+                            image && (<img src={process.env.REACT_APP_API_URI + image} alt="" /> )
                         }
                         {
                             newImage && ( <img src={URL.createObjectURL(newImage)} alt="" /> )

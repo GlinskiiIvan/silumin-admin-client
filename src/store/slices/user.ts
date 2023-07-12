@@ -84,7 +84,6 @@ const userSlice = createSlice({
 
         //check auth
         builder.addCase(checkThunk.pending, (state) => {
-            state.userData = null;
             state.status = 'LOADING';
             state.error = '';
         });

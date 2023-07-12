@@ -8,10 +8,7 @@ import { useParams } from "react-router-dom";
 import LayoutActionRecord from "../../../Layouts/LayoutActionRecord/LayoutActionRecord";
 import {useInput} from "../../../hooks/useInput";
 import {ILicenseItem, licenseAPI} from "../../../store/services/licenses";
-import {usersAPI} from "../../../store/services/users";
-import {rolesAPI} from "../../../store/services/roles";
 import ResponseResultModal from "../../../components/Modals/ResponseResultModal/ResponseResultModal";
-import {REACT_APP_API_URL} from "../../../utils/constants";
 
 interface INewLicenses {id: number; file: File}
 
@@ -114,7 +111,7 @@ const LicensesActions: React.FC = () => {
                                         <div className={styles.licenses__list}>
                                             {licenses.map((item) => (
                                                 <div key={item.id} className={styles['licenses__list--item']}>
-                                                    <img src={REACT_APP_API_URL + item.image} alt="" />
+                                                    <img src={process.env.REACT_APP_API_URI + item.image} alt="" />
                                                     <ClearIcon onClick={() => removeLicenses(item.id)} />
                                                 </div>
                                             ))}
